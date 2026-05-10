@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Gallery</title>
+        <link rel="stylesheet" href="slider_style.css">
+        <link rel="stylesheet" href="navbar.css">
+    </head>
+    <body>
+        <div class="topnav">
+            <a href="home.html">Home</a>
+            <a href="#">About_Us</a>
+            <a  class="active" href="gallery.html">Gallery</a>
+            <a href="#">Contact_Us</a>
+        
+        </div>
+
+        <h1>GAME SLIDE SHOW</h1>
+        <section>
+            <img class="mySlides" src="C:\Users\Owner\Downloads\mario.jpg" alt="Slide 1">
+            <img class="mySlides" src="C:\Users\Owner\Downloads\dbs.png" alt="Slide 2">
+            <img class="mySlides" src="C:\Users\Owner\Downloads\dbz.png" alt="Slide 3">
+        </section>
+        <script>
+
+
+            let myIndex = 0;
+            carousel();
+
+
+            function carousel() {
+
+
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+
+
+                // Hide all slides
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+
+
+                // Move to next slide
+                myIndex++;
+
+
+                // Restart slideshow
+                if (myIndex > slides.length) {
+                    myIndex = 1;
+                }
+
+
+                // Show current image
+                slides[myIndex - 1].style.display = "block";
+
+
+                // Change every 3 seconds
+                setTimeout(carousel, 3000);
+            }
+
+
+        </script>
+
+    </body>
+</html>
